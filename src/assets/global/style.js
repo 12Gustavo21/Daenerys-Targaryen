@@ -19,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #0f0f11;
   }
 
+  ::selection {
+    background-color: #f9f9f9;
+    color: #0f0f11;
+  }
+
   @font-face {
     font-family: 'GameThrones';
     src: url(${Fonte}) format('truetype');
