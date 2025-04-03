@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   position: relative;
   padding: 0 1rem;
 `;
@@ -31,8 +31,8 @@ export const TimelineList = styled.ul`
 `;
 
 export const TimelineItem = styled.li`
-  width: 10em;
-  height: 30rem;
+  width: 10rem;
+  height: 55rem;
   display: grid;
   grid-template-areas:
     "role"
