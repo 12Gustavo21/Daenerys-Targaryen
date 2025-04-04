@@ -4,27 +4,27 @@ import styled from "styled-components";
 import Queen from "../../../img/queen.jpg";
 import Queen2 from "../../../img/queen-2.png";
 
-export const Container = styled.div`
+export const Container = styled.section`
   position: relative;
   height: 100vh;
+  background: url(${Queen}) no-repeat center/cover;
 `;
 
 export const Background = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(${Queen}) no-repeat left/cover;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  z-index: -2;
+  mask: radial-gradient(circle, #0000 295px, rgba(0, 0, 0, 0.9) 305px);
+  backdrop-filter: blur(11px);
+  z-index: 1;
 `;
 
 export const BackgroundOverlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(${Queen2}) no-repeat left/cover;
-  z-index: -1;
+  background: url(${Queen2}) no-repeat center/cover;
+  z-index: 2;
 `;
 
 export const Wrapper = styled.section`
@@ -49,7 +49,8 @@ export const TitleBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  z-index: 1;
+  position: relative;
+  z-index: 3;
 
   ${Title}:first-child {
     align-self: flex-start;
@@ -67,6 +68,5 @@ export const SideImage = styled.img`
   left: -300px;
   width: 1200px;
   filter: drop-shadow(0 10px 10px #0f0f11);
-  z-index: -1;
-
+  z-index: 1;
 `;

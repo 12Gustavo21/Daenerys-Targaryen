@@ -1,10 +1,26 @@
 import styled from "styled-components";
 
+// background
+import MadKing from "../../../img/mad-king.jpg";
+
 export const Wrapper = styled.section`
   width: 100%;
   height: 100vh;
   position: relative;
-  padding: 0 1rem;
+  background: url(${MadKing}) no-repeat center/cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    z-index: 0;
+  }
 `;
 
 export const Title = styled.h2`

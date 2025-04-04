@@ -8,12 +8,12 @@ export default function index() {
         <S.TimelineList>
           <S.TimelineItem>
             <S.IconContainer>
-              <S.IconImage src="/icon.webp" alt="Targaryen house icon" />
+              <S.IconImage src="/icon.webp" alt="Targaryen house icon" draggable="false" />
             </S.IconContainer>
           </S.TimelineItem>
           <S.TimelineItem>
             <S.IconContainer>
-              <S.IconImage src="/icon.webp" alt="Targaryen house icon" />
+              <S.IconImage src="/icon.webp" alt="Targaryen house icon" draggable="false" />
             </S.IconContainer>
           </S.TimelineItem>
         </S.TimelineList>

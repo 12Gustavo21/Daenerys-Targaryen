@@ -1,35 +1,45 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 // background
 import Mother from "../../../img/mother.png";
 
-export const Container = styled.div`
-  position: relative;
+const burn = keyframes`
+  0% {text-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #feec85,
+  -20px -20px 40px #ffae34,
+  20px -40px 50px #ec760c,
+  -20px -60px 60px #cd4606,
+  0 -80px 70px #973716,
+  10px -90px 80px #451b0e;}
+100% {text-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #fefcc9,
+  -20px -20px 40px #feec85,
+  22px -42px 60px #ffae34,
+  -22px -58px 50px #ec760c,
+  0 -82px 80px #cd4606,
+  10px -90px 80px  #973716;}
+`;
+
+export const Container = styled.section`
   height: 100vh;
-`;
-
-export const Background = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
   background: url(${Mother}) no-repeat center/cover;
-  z-index: -2;
-`;
+  position: relative;
 
-export const BackgroundOverlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, .8) 100%
-  );
-  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 0;
+  }
 `;
 
 export const Wrapper = styled.section`
-  position: relative;
   padding: 5rem 1rem;
   width: 100%;
   height: 100%;
@@ -51,5 +61,9 @@ export const TitleBox = styled.div`
   justify-content: space-between;
   height: 100%;
   text-align: center;
-  z-index: 1;
+
+  ${Title}:last-child {
+    color: #0f0f11;
+    animation: ${burn} 0.65s ease-in-out infinite alternate;
+  }
 `;
