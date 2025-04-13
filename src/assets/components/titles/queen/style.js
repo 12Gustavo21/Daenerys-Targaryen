@@ -14,8 +14,6 @@ export const Background = styled.div`
   width: 100%;
   height: 100%;
   background: url(${Queen}) no-repeat left/cover;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
   z-index: -2;
 `;
 
@@ -24,6 +22,7 @@ export const BackgroundOverlay = styled.div`
   width: 100%;
   height: 100%;
   background: url(${Queen2}) no-repeat left/cover;
+  transition: 1s;
   z-index: -1;
 `;
 
