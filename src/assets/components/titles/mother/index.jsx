@@ -2,10 +2,7 @@ import * as S from "./style";
 
 export default function index() {
   return (
-    <S.Container>
-      <S.Background />
-      <S.BackgroundOverlay />
-
+    <S.Container> 
       <S.Wrapper>
         <S.TitleBox>
           <S.Title>The Mother of</S.Title>

@@ -29,21 +29,23 @@ export default function App() {
       <GlobalStyle />
       <div className="scroll-container">
         <Header />
-        <Suspense fallback={<div>loading ...</div>}>
-          <Stormborn />
-        </Suspense>
-        <Suspense fallback={<div>loading ...</div>}>
-          <Targaryen />
-        </Suspense>
-        <Suspense fallback={<div>loading ...</div>}>
-          <Queen />
-        </Suspense>
-        <Suspense fallback={<div>loading ...</div>}>
-          <Protector />
-        </Suspense>
-        <Suspense fallback={<div>loading ...</div>}>
-          <Mother />
-        </Suspense>
+        <main>
+          <Suspense fallback={<div>loading ...</div>}>
+            <Stormborn />
+          </Suspense>
+          <Suspense fallback={<div>loading ...</div>}>
+            <Targaryen />
+          </Suspense>
+          <Suspense fallback={<div>loading ...</div>}>
+            <Queen />
+          </Suspense>
+          <Suspense fallback={<div>loading ...</div>}>
+            <Protector />
+          </Suspense>
+          <Suspense fallback={<div>loading ...</div>}>
+            <Mother />
+          </Suspense>
+        </main>
       </div>
     </>
   );

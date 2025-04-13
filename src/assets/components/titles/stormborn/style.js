@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   margin-top: 4rem;
   position: relative;
 

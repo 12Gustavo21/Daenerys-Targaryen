@@ -3,29 +3,23 @@ import styled from "styled-components";
 // background
 import Protector from "../../../img/protector.jpg";
 
-export const Container = styled.div`
+export const Container = styled.section`
   position: relative;
   height: 100vh;
-`;
-
-export const Background = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
   background: url(${Protector}) no-repeat center/cover;
-  z-index: -2;
-`;
 
-export const BackgroundOverlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
-  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 0;
+  }
 `;
 
 export const Wrapper = styled.section`
@@ -60,5 +54,5 @@ export const SideImage = styled.img`
   right: -200px;
   width: 700px;
   filter: drop-shadow(0 10px 10px #0f0f11) saturate(0.8);
-  z-index: -1;
+  z-index: 1;
 `;

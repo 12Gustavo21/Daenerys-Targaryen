@@ -11,7 +11,7 @@ export default function index() {
         <h2>
           Stormborn
         </h2>
-        <Thunders hue={38}
+        <Thunders hue={0}
           xOffset={0}
           speed={1}
           intensity={2}
